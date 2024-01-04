@@ -15,13 +15,14 @@ document.querySelector(".check").addEventListener("click", function () {
 
   // Logica do jogo
   if (!guess) {
-    // se não houver guess...
-    displayMessage("Sem numero...");
+    // se não houver guess numericos, ja que i type em HTML é number, já retorna false se não for um numero...
+    displayMessage("Sem número...");
     // Sempre leve em conta a possibilidade de não haver valor
 
     // Se foi um acerto
   } else if (guess === secretNumber) {
-    displayMessage("Parabens, acertou!");
+    displayMessage("Parabéns, acertou!");
+    document.querySelector(".claps").play(); // Toca um elemento de audio de HTML
     document.querySelector(".number").textContent = secretNumber;
     document.querySelector("body").style.backgroundColor = "#e71a1a"; //Modificando CSS (.style.elemento a mudar). O valor deve ser uma string
     document.querySelector(".number").style.width = "30rem";
@@ -49,12 +50,12 @@ document.querySelector(".check").addEventListener("click", function () {
   }
 });
 
-// Botão Denovo!
+// Botão De novo!
 document.querySelector(".again").addEventListener("click", function () {
   score = 20; // Reseta score
   document.querySelector(".score").textContent = score; // Passa score para a pagina
   secretNumber = Math.trunc(Math.random() * 20) + 1; // gera outro numero secreto
-  displayMessage( "Ola novamente, tente advinhar!");
+  displayMessage( "Olá novamente, tente advinhar!");
   document.querySelector(".number").textContent = "?"; // Esconde o numero
   document.querySelector(".guess").value = " "; // Reinicia o valor no input
 
