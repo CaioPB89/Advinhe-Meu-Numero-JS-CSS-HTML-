@@ -1,1 +1,1 @@
-Projeto de um curso de JavaScript com uso de DOM para manipulação de HTML e CSS. Traduzido para Portuguẽs com algumas alterações.
+Projeto de um curso de JavaScript da Udemy chamado "The Complete JavaScript Course 2024: From Zero to Expert!" com uso de DOM para manipulação de HTML e CSS. Traduzido para Portuguẽs com algumas alterações.
